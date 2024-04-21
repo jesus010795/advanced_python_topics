@@ -114,3 +114,48 @@ for el in list_combination:
 ```
 
 Esto nos sirve para procesos en donde debemos manejar multiples iterables al mismo tiempo.
+
+# Enumerate
+
+La función enumerate() en Python se utiliza para agregar un contador a un iterable y devolverlo como un objeto enumerado.
+
+Recibe un objeto iterable y retorna tuplas en la que cada una contienen un elemtno que recibe y un indice que indica su posicion, por defecto se inicia en 0, aunque se puede cambiar ese indice desde el cual incia esta cuenta.
+
+- El primer parametro es el objeto iterables
+-  Como segundo parametro opcional recibe start que pordefecto esta en 0, y hace referencia al indica del cual comienza la enumeracion.
+
+```
+enumerate(iterable, start=0)
+```
+
+```
+fruits = ['manzana','melon','pera','platano']
+
+
+enum_fruits = enumerate(fruits)
+print(list(enum_fruits)) 
+#[(0, 'manzana'), (1, 'melon'), (2, 'pera'), (3, 'platano')]
+
+for index, fruit in enum_fruits:
+    print(f"indice {index}, fruta {fruit}")
+
+# ----  Consola ----
+# indice 0, fruta manzana
+# indice 1, fruta melon
+# indice 2, fruta pera
+# indice 3, fruta platano
+```
+
+Si queremos ver el contenido de este enumerate lo convertimos en una lista con la funcion list, al imprimirlo nos devuelve una tupla por elemento.
+El parametro start lo podemos modificar segun nestra necesidad.
+
+Al igual que la funcion range y zip la funcion enumerate se utiliza mucho en la construccion de ciclos, esto se hace con el fin de que en cada iteracion no solo se obtenga el elemento recorrido si no tambien su indice, indicando asi su posicion en la lista.
+
+> Por alguna razon ejecuto un ciclo for y despues quiero imprimir el valor de la variable que contienen la lista enumerada y no me aparece nada... **Investigar esto**
+
+> 📗 
+La función enumerate() en Python es una herramienta útil para recorrer una lista o cualquier otro iterable manteniendo un registro del índice de cada elemento. Sin embargo, es importante recordar que enumerate() devuelve un objeto enumerado, no la lista en sí. Por lo tanto, al imprimir directamente la variable que contiene el resultado de enumerate(), no obtendrás el contenido de la lista enumerada, sino información sobre el objeto enumerado en sí mismo.
+
+# Sentencia else en for
+
+
