@@ -159,3 +159,36 @@ La función enumerate() en Python es una herramienta útil para recorrer una lis
 # Sentencia else en for
 
 
+El bloque else se ejecuta unicamente cuando ya se ha iterado sobre todos y cada uno de los elementos del objeto iterable.
+Si se utiliza la sentecnia break sobre una condicion dentro del ciclo for veremos que la setencia else no se ejecutara.
+
+```
+fruits = ['manzana','melon','pera','platano']
+
+
+for f in fruits:
+    print(f)
+else: 
+    print("Ciclo terminado")
+
+# manzana
+# melon
+# pera
+# platano
+# Ciclo terminado
+
+```
+
+```
+
+for f in fruits:
+    print(f)
+    if f == 'pera':
+        break
+else: 
+    print("Ciclo terminado")
+
+# manzana
+# melon
+# pera
+```
